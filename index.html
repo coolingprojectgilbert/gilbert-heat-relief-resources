@@ -114,14 +114,13 @@
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
         }
         .sticky-nav a {
+            /* Use pointer-events: none to disable clicking on the bar elements */
+            pointer-events: none; 
             transition: background-color 0.2s ease, color 0.2s ease;
             text-decoration: none;
             color: #115e59;
             font-weight: 600;
-        }
-        .sticky-nav a:hover {
-            background-color: #b2dfdb;
-            color: #064e3b;
+            cursor: default; /* Change cursor to default to indicate non-interactivity */
         }
         
     </style>
@@ -148,12 +147,12 @@
     
     <nav class="sticky-nav">
         <div class="container mx-auto px-4 flex justify-between md:justify-around py-2 overflow-x-auto text-sm whitespace-nowrap">
-            <a href="#emergency-card" class="block px-3 py-2 rounded-lg">🚨 Emergency</a>
-            <a href="#utilities-card" class="block px-3 py-2 rounded-lg">💰 Utility Bills</a>
-            <a href="#repair-card" class="block px-3 py-2 rounded-lg">🛠️ AC Repair</a>
-            <a href="#prevention-card" class="block px-3 py-2 rounded-lg">💡 Heat Safety</a>
-            <a href="#centers-card" class="block px-3 py-2 rounded-lg">🧊 Cooling Centers</a>
-            <a href="#report-card" class="block px-3 py-2 rounded-lg">🗣️ Report Issue</a>
+            <a class="block px-3 py-2 rounded-lg">🚨 Emergency</a>
+            <a class="block px-3 py-2 rounded-lg">💰 Utility Bills</a>
+            <a class="block px-3 py-2 rounded-lg">🛠️ AC Repair</a>
+            <a class="block px-3 py-2 rounded-lg">💡 Heat Safety</a>
+            <a class="block px-3 py-2 rounded-lg">🧊 Cooling Centers</a>
+            <a class="block px-3 py-2 rounded-lg">🗣️ Report Issue</a>
         </div>
     </nav>
 
@@ -517,29 +516,9 @@
         </div>
     </main>
     <script>
-        // Smooth scroll function for sticky nav links
-        document.querySelectorAll('.sticky-nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetCardId = this.getAttribute('href'); 
-                const targetCard = document.querySelector(targetCardId);
-                
-                if (targetCard) {
-                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    
-                    setTimeout(() => {
-                        // Check if the content is already open before clicking
-                        const contentId = targetCard.id.replace('-card', '-content');
-                        const content = document.getElementById(contentId);
-                        if (!content.classList.contains('active')) {
-                             targetCard.click();
-                        }
-                    }, 500); 
-                }
-            });
-        });
-
-        // Existing toggle function
+        // NOTE: The sticky nav bar links no longer have event listeners to scroll or open content.
+        // The main card click functionality remains the primary method for opening content.
+        
         function toggleContent(contentId, cardElement) {
             const content = document.getElementById(contentId);
             const isActive = content.classList.contains('active');
