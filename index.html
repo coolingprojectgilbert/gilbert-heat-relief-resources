@@ -9,16 +9,15 @@
         /* Custom styles for a cleaner look */
         /* --- FONT UPDATE: Inter is now fully loaded --- */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
         body {
             font-family: 'Inter', sans-serif; /* Applied font */
             background-color: #f4f7f9; /* Light background */
-            font-size: 18px; /* --- FIX 1: Body size 18px --- */
-            line-height: 1.6; /* --- FIX 3: Consistent line height --- */
+            font-size: 18px; /* Body size 18px */
+            line-height: 1.6; /* Consistent line height */
         }
 
-        /* Define the deep gold color */
         /* --- COLOR & TYPOGRAPHY FIXES --- */
-        
         /* FIX 1: STIFF FONT HIERARCHY */
         .h1-style {
             font-size: 40px; /* H1: 40px, bold */
@@ -32,7 +31,7 @@
             font-size: 20px; /* H3: 20px, semi-bold */
             font-weight: 600; /* Semi-bold */
         }
-        
+
         /* FIX 2: GOLD RESTRICTION */
         .color-gold-accent { color: #CC9900; }
         .bg-gold-light { background-color: #FFFBEB; }
@@ -44,12 +43,10 @@
             transition: color 0.3s ease;
         }
         .text-link-gold {
-            color: #CC9900;
             color: #CC9900; /* ONLY links are gold */
         }
         .text-link-gold:hover {
             color: #A37A00; /* Darker hover state for gold */
-            color: #A37A00;
             text-decoration: underline;
         }
 
@@ -75,7 +72,6 @@
         .sticky-nav a:hover {
             background-color: #b2dfdb; /* Darker teal on hover */
             color: #064e3b;
-            background-color: #343a40;
         }
 
         /* Existing card styles remain for the interactive effect */
@@ -83,17 +79,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
             cursor: pointer;
-        /* FIX 3: CONSISTENT SPACING */
-        /* Applied to main container */
-        .main-content-section {
-            padding-top: 60px; /* 60px Top */
-            padding-bottom: 30px; /* 30px Bottom */
-            margin-left: auto;
-            margin-right: auto;
         }
-        .resource-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
         /* Standard Card Spacing (Adjusted to H3) */
         .resource-card h3 {
@@ -102,17 +88,27 @@
             color: #1f2937; /* Dark gray, NOT gold */
         }
 
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* FIX 3: CONSISTENT SPACING */
+        /* Applied to main container */
+        .main-content-section {
+            padding-top: 60px; /* 60px Top */
+            padding-bottom: 30px; /* 30px Bottom */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
         /* --- UPDATE 1: INCREASED VERTICAL SPACING --- */
         /* Content Section Spacing */
         .content-section {
             display: none; /* Initially hidden */
-            display: none;
             opacity: 0;
             transition: opacity 0.5s ease;
-            margin-top: 3.5rem; /* Increased margin */
-            margin-bottom: 3.5rem;
-            padding: 2.5rem; /* Increased padding */
-            margin-top: 4rem; 
+            margin-top: 4rem;
             margin-bottom: 4rem;
             padding: 2.5rem;
             border-radius: 0.75rem;
@@ -122,62 +118,32 @@
             display: block;
             opacity: 1;
         }
-        
-        /* --- UPDATE 2: NEW RESOURCE BOX STYLES --- */
 
+        /* --- UPDATE 2: NEW RESOURCE BOX STYLES --- */
         /* Resource Box Spacing */
         .resource-box {
             border: 1px solid #e5e7eb; /* Light gray border */
             border-left: 5px solid #CC9900; /* Gold left border accent */
-            border: 1px solid #e5e7eb;
-            border-left: 5px solid #CC9900;
             padding: 1.25rem;
             margin-bottom: 1.5rem;
             border-radius: 0.5rem;
             background-color: #ffffff; /* White background for contrast */
-            background-color: #ffffff;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
             transition: all 0.2s ease;
         }
         .resource-box:hover {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-
-        /* We no longer need this old style, as we use .resource-box now */
-        .resource-item {
-            padding-left: 0;
-            margin-bottom: 0;
+        
         /* FIX 3: List Item Spacing within Boxes */
         .resource-box ul li {
             margin-bottom: 10px; /* 10px spacing */
         }
-
-        /* sticky nav styles */
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background-color: #e0f2f1;
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
-        }
-        .sticky-nav a {
-            transition: background-color 0.2s ease, color 0.2s ease;
-            text-decoration: none;
-            color: #115e59;
-            font-weight: 600;
-        }
-        .sticky-nav a:hover {
-            background-color: #b2dfdb;
-            color: #064e3b;
-        }
-        
     </style>
 </head>
 <body>
-
     <header class="header-bg py-10 md:py-16 text-white shadow-lg">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2">Gilbert Cool Home Resource Hub</h1>
             <h1 class="h1-style mb-2">Gilbert Cool Home Resource Hub</h1>
             <p class="text-xl sm:text-2xl font-light">Your guide to AC assistance and heat safety in the Town of Gilbert.</p>
         </div>
@@ -186,7 +152,8 @@
     <section class="bg-white py-4 shadow-sm">
         <div class="container mx-auto px-4 text-center text-sm text-gray-600">
             <p class="font-bold mb-1">
-                This resource is for informational purposes only and is not affiliated with the listed organizations. Information may change, please contact organizations directly.
+                This resource is for informational purposes only and is not affiliated with the listed organizations.
+                Information may change, please contact organizations directly.
             </p>
             <p>
                 Created by an ASU student, December 2025, for a community resource project.
@@ -196,32 +163,27 @@
 
     <nav class="sticky-nav">
         <div class="container mx-auto px-4 flex justify-between md:justify-around py-2 overflow-x-auto text-sm whitespace-nowrap">
-            <a href="#emergency-card" class="block px-3 py-2 rounded-lg">🚨 Emergency</a>
-            <a href="#utilities-card" class="block px-3 py-2 rounded-lg">💰 Utility Bills</a>
-            <a href="#repair-card" class="block px-3 py-2 rounded-lg">🛠️ AC Repair</a>
-            <a href="#prevention-card" class="block px-3 py-2 rounded-lg">💡 Heat Safety</a>
-            <a href="#centers-card" class="block px-3 py-2 rounded-lg">🧊 Cooling Centers</a>
-            <a href="#report-card" class="block px-3 py-2 rounded-lg">🗣️ Report Issue</a>
+            <a href="#emergency-card" class="block px-3 py-2 rounded-lg"> 🚨 Emergency</a>
+            <a href="#utilities-card" class="block px-3 py-2 rounded-lg"> 💰 Utility Bills</a>
+            <a href="#repair-card" class="block px-3 py-2 rounded-lg"> 🛠️ AC Repair</a>
+            <a href="#prevention-card" class="block px-3 py-2 rounded-lg"> 💡 Heat Safety</a>
+            <a href="#centers-card" class="block px-3 py-2 rounded-lg"> 🧊 Cooling Centers</a>
+            <a href="#report-card" class="block px-3 py-2 rounded-lg"> 🗣️ Report Issue</a>
         </div>
     </nav>
-    <main class="container mx-auto p-4 sm:p-8">
 
-        <h2 class="text-3xl font-semibold text-gray-800 mt-6 mb-8 text-center">
     <main class="container main-content-section p-4 sm:p-8">
-
         <h2 class="h2-style text-gray-800 mt-0 mb-8 text-center">
             Get Help on the Following Topics
         </h2>
-
+        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
             <a id="emergency-card" class="resource-card bg-white p-6 rounded-xl border-t-4 border-gold-accent flex flex-col justify-between" onclick="toggleContent('emergency-content', this)">
                 <div>
                     <div class="text-4xl mb-4 p-3 bg-gold-light color-gold-accent rounded-full w-16 h-16 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.398 16c-.77 1.333.192 3 1.732 3z" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Emergency Assistance with AC/Utilities</h3>
-                    <p class="text-gray-600 text-sm">Facing an immediate shut-off or AC failure? Find programs that can help within 24-48 hours.</p>
                     <p class="text-gray-600 text-base">Facing an immediate shut-off or AC failure? Find programs that can help within 24-48 hours.</p>
                 </div>
                 <span class="mt-4 text-link-gold font-semibold flex items-center justify-between">
@@ -231,14 +193,13 @@
                     </svg>
                 </span>
             </a>
-
+            
             <a id="utilities-card" class="resource-card bg-white p-6 rounded-xl border-t-4 border-gold-accent flex flex-col justify-between" onclick="toggleContent('utilities-content', this)">
                 <div>
                     <div class="text-4xl mb-4 p-3 bg-gold-light color-gold-accent rounded-full w-16 h-16 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m0 0l-1 5h10l-1-5m-1 0h-8m8 0a2 2 0 100-4 2 2 0 000 4zm-8 0a2 2 0 100-4 2 2 0 000 4z" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Paying Utility Bill (LIHEAP)</h3>
-                    <p class="text-gray-600 text-sm">Guidance on applying for state and federal programs like LIHEAP to manage seasonal energy costs.</p>
                     <p class="text-gray-600 text-base">Guidance on applying for state and federal programs like LIHEAP to manage seasonal energy costs.</p>
                 </div>
                 <span class="mt-4 text-link-gold font-semibold flex items-center justify-between">
@@ -248,14 +209,13 @@
                     </svg>
                 </span>
             </a>
-
+            
             <a id="repair-card" class="resource-card bg-white p-6 rounded-xl border-t-4 border-gold-accent flex flex-col justify-between" onclick="toggleContent('repair-content', this)">
                 <div>
                     <div class="text-4xl mb-4 p-3 bg-gold-light color-gold-accent rounded-full w-16 h-16 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-2h4m-4 0H8m-2 4h4m4-4h2m-6 0v-2m-2-2h4m4 4h2m-6-4v2" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">AC Repair & Replacement Programs</h3>
-                    <p class="text-gray-600 text-sm">Resources for fixing or replacing broken units, and weatherization assistance for energy efficiency.</p>
                     <p class="text-gray-600 text-base">Resources for fixing or replacing broken units, and weatherization assistance for energy efficiency.</p>
                 </div>
                 <span class="mt-4 text-link-gold font-semibold flex items-center justify-between">
@@ -265,14 +225,13 @@
                     </svg>
                 </span>
             </a>
-
+            
             <a id="prevention-card" class="resource-card bg-white p-6 rounded-xl border-t-4 border-gold-accent flex flex-col justify-between" onclick="toggleContent('prevention-content', this)">
                 <div>
                     <div class="text-4xl mb-4 p-3 bg-gold-light color-gold-accent rounded-full w-16 h-16 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13m-6 5l-12-3v13l12 3m-12-3h.01M5 13H3m0 0h14" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Prevention & Heat Safety Tips</h3>
-                    <p class="text-gray-600 text-sm">Essential tips for staying hydrated, recognizing heat illness, and preventing future energy issues.</p>
                     <p class="text-gray-600 text-base">Essential tips for staying hydrated, recognizing heat illness, and preventing future energy issues.</p>
                 </div>
                 <span class="mt-4 text-link-gold font-semibold flex items-center justify-between">
@@ -282,14 +241,13 @@
                     </svg>
                 </span>
             </a>
-
+            
             <a id="centers-card" class="resource-card bg-white p-6 rounded-xl border-t-4 border-gold-accent flex flex-col justify-between" onclick="toggleContent('centers-content', this)">
                 <div>
                     <div class="text-4xl mb-4 p-3 bg-gold-light color-gold-accent rounded-full w-16 h-16 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0zM12 13a3 3 0 100-6 3 3 0 000 6z" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Find Local Cooling & Heat Relief Centers in Gilbert</h3>
-                    <p class="text-gray-600 text-sm">Map and list of designated community cooling centers, hydration stations, and libraries.</p>
                     <p class="text-gray-600 text-base">Map and list of designated community cooling centers, hydration stations, and libraries.</p>
                 </div>
                 <span class="mt-4 text-link-gold font-semibold flex items-center justify-between">
@@ -299,14 +257,13 @@
                     </svg>
                 </span>
             </a>
-
+            
             <a id="report-card" class="resource-card bg-white p-6 rounded-xl border-t-4 border-gold-accent flex flex-col justify-between" onclick="toggleContent('report-content', this)">
                 <div>
                     <div class="text-4xl mb-4 p-3 bg-gold-light color-gold-accent rounded-full w-16 h-16 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Report a Heat or Housing Issue</h3>
-                    <p class="text-gray-600 text-sm">Find contact information for local code enforcement or reporting hazardous housing conditions.</p>
                     <p class="text-gray-600 text-base">Find contact information for local code enforcement or reporting hazardous housing conditions.</p>
                 </div>
                 <span class="mt-4 text-link-gold font-semibold flex items-center justify-between">
@@ -316,141 +273,124 @@
                     </svg>
                 </span>
             </a>
-
         </div>
-
+        
         <section id="emergency-content" class="content-section bg-white border-gold-accent text-gray-800 border-t-4">
-            <h3 class="text-2xl font-bold color-gold-accent mb-4">Emergency Assistance (Immediate Need)</h3>
             <h3 class="h2-style color-gold-accent mb-4">Emergency Assistance (Immediate Need)</h3>
             <p class="mb-6">If your power is off or your AC is completely broken and temperatures are above 100°F, use these contacts first.</p>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Utility Shut-Off (APS or SRP Customers)</p>
                 <p class="h3-style">Utility Shut-Off (APS or SRP Customers)</p>
                 <p>Call **211 Arizona**. They can connect you to emergency funding to prevent an immediate utility disconnection.</p>
-                <p class="font-mono mt-2">📞 **Phone:** <a href="tel:211" class="text-link-gold hover:underline">2-1-1</a> (Available 24/7)</p>
+                <p class="font-mono mt-2"> 📞  **Phone:** <a href="tel:211" class="text-link-gold hover:underline">2-1-1</a> (Available 24/7)</p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">The Salvation Army (Emergency Utilities & AC)</p>
                 <p class="h3-style">The Salvation Army (Emergency Utilities & AC)</p>
-                <p>Provides emergency, one-time assistance for utilities (APS/SRP) and critical AC repairs/replacement based on specific income criteria and life-safety needs for **Gilbert residents**. **Always call the local Corps for eligibility and appointment details.**</p>
-                <p class="font-mono mt-2">📞 **Chandler Corps Phone:** <a href="tel:4809632041" class="text-link-gold hover:underline">480-963-2041</a></p>
-                <p class="font-mono">📍 **Nearest Location (Chandler):** 85 E. Saragosa Street, CHANDLER, AZ</p>
-                <p class="font-mono">🌐 **Main Utility Link:** <a href="https://www.salvationarmyusa.org/utility-rent-assistance/" target="_blank" class="text-link-gold hover:underline">Salvation Army Utility/Rent Assistance</a></p>
+                <p>Provides emergency, one-time assistance for utilities (APS/SRP) and critical AC repairs/replacement based on specific income criteria and life-safety needs for **Gilbert residents**.
+                **Always call the local Corps for eligibility and appointment details.**</p>
+                <p class="font-mono mt-2"> 📞  **Chandler Corps Phone:** <a href="tel:4809632041" class="text-link-gold hover:underline">480-963-2041</a></p>
+                <p class="font-mono"> 📍  **Nearest Location (Chandler):** 85 E. Saragosa Street, CHANDLER, AZ</p>
+                <p class="font-mono"> 🌐  **Main Utility Link:** <a href="https://www.salvationarmyusa.org/utility-rent-assistance/" target="_blank" class="text-link-gold hover:underline">Salvation Army Utility/Rent Assistance</a></p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">AZCEND (Community Action)</p>
                 <p class="h3-style">AZCEND (Community Action)</p>
                 <p>A Chandler-based non-profit providing emergency utility, rent, and cooling assistance for Chandler, **Gilbert**, and Queen Creek residents.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://azcend.org/get-help/rent-utilities-gilbert/" target="_blank" class="text-link-gold hover:underline">azcend.org/rent-utilities-gilbert</a> | 📞 **Phone:** <a href="tel:4809631423" class="text-link-gold hover:underline">480-963-1423</a></p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://azcend.org/get-help/rent-utilities-gilbert/" target="_blank" class="text-link-gold hover:underline">azcend.org/rent-utilities-gilbert</a> |  📞  **Phone:** <a href="tel:4809631423" class="text-link-gold hover:underline">480-963-1423</a></p>
             </div>
         </section>
-
+        
         <section id="utilities-content" class="content-section bg-gray-50 border-gold-accent text-gray-800 border-t-4">
-            <h3 class="text-2xl font-bold color-gold-accent mb-4">Utility Bill Assistance (LIHEAP & General Programs)</h3>
             <h3 class="h2-style color-gold-accent mb-4">Utility Bill Assistance (LIHEAP & General Programs)</h3>
             <p class="mb-6">These programs require applications and offer longer-term financial support for energy costs.</p>
-
-            <h4 class="text-xl font-bold color-gold-accent mt-6 mb-3">State & County Programs</h4>
+            
             <h4 class="h3-style text-gray-800 mt-6 mb-3">State & County Programs</h4>
-
             <div class="resource-box">
-                <p class="font-semibold text-lg">Low Income Home Energy Assistance Program (LIHEAP)</p>
                 <p class="h3-style">Low Income Home Energy Assistance Program (LIHEAP)</p>
                 <p>Federal funding for high energy bills, managed by the Arizona Department of Economic Security (DES).</p>
-                <p class="font-mono mt-2">🌐 **Application Info:** <a href="https://des.az.gov/liheap" target="_blank" class="text-link-gold hover:underline">des.az.gov/liheap</a> | 📞 **Phone:** <a href="tel:8664941981" class="text-link-gold hover:underline">1-866-494-1981</a></p>
+                <p class="font-mono mt-2"> 🌐  **Application Info:** <a href="https://des.az.gov/liheap" target="_blank" class="text-link-gold hover:underline">des.az.gov/liheap</a> |  📞  **Phone:** <a href="tel:8664941981" class="text-link-gold hover:underline">1-866-494-1981</a></p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Maricopa County Human Services Department Client Portal</p>
                 <p class="h3-style">Maricopa County Human Services Department Client Portal</p>
-                <p>This is the main client intake portal to apply for LIHEAP and Weatherization Assistance. This is where you upload documents and check application status.</p>
-                <p class="font-mono mt-2">🌐 **Client Portal Link:** <a href="https://hsdclientportal.maricopa.gov/" target="_blank" class="text-link-gold hover:underline">hsdclientportal.maricopa.gov</a> | 📞 **Phone:** <a href="tel:6025060589" class="text-link-gold hover:underline">602-506-0589</a></p>
+                <p>This is the main client intake portal to apply for LIHEAP and Weatherization Assistance.
+                This is where you upload documents and check application status.</p>
+                <p class="font-mono mt-2"> 🌐  **Client Portal Link:** <a href="https://hsdclientportal.maricopa.gov/" target="_blank" class="text-link-gold hover:underline">hsdclientportal.maricopa.gov</a> |
+                📞  **Phone:** <a href="tel:6025060589" class="text-link-gold hover:underline">602-506-0589</a></p>
             </div>
-
-            <h4 class="text-xl font-bold color-gold-accent mt-6 mb-3">Utility Company Programs</h4>
+            
             <h4 class="h3-style text-gray-800 mt-6 mb-3">Utility Company Programs</h4>
-
             <div class="resource-box">
-                <p class="font-semibold text-lg">SRP Limited Income/Income Qualified Discount</p>
                 <p class="h3-style">SRP Limited Income/Income Qualified Discount</p>
                 <p>Discount rate for eligible customers of Salt River Project (SRP) to lower monthly bills.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.srpnet.com/customer-service/residential-electric/income-qualified-discount" target="_blank" class="text-link-gold hover:underline">srpnet.com/income-qualified-discount</a> | 📞 **Phone:** <a href="tel:6022368888" class="text-link-gold hover:underline">602-236-8888</a></p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://www.srpnet.com/customer-service/residential-electric/income-qualified-discount" target="_blank" class="text-link-gold hover:underline">srpnet.com/income-qualified-discount</a> |  📞  **Phone:** <a href="tel:6022368888" class="text-link-gold hover:underline">602-236-8888</a></p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">APS Energy Support Program</p>
                 <p class="h3-style">APS Energy Support Program</p>
                 <p>Discount rate and payment assistance options for eligible customers of Arizona Public Service (APS).</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.aps.com/en/Residential/Account/Assistance-Programs/Energy-Support-Program" target="_blank" class="text-link-gold hover:underline">aps.com/Energy-Support-Program</a> | 📞 **Phone:** <a href="tel:6023717171" class="text-link-gold hover:underline">602-371-7171</a></p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://www.aps.com/en/Residential/Account/Assistance-Programs/Energy-Support-Program" target="_blank" class="text-link-gold hover:underline">aps.com/Energy-Support-Program</a> |  📞  **Phone:** <a href="tel:6023717171" class="text-link-gold hover:underline">602-371-7171</a></p>
             </div>
-
-            <h4 class="text-xl font-bold color-gold-accent mt-6 mb-3">Local & Non-Profit Resources</h4>
+            
             <h4 class="h3-style text-gray-800 mt-6 mb-3">Local & Non-Profit Resources</h4>
-
             <div class="resource-box">
-                <p class="font-semibold text-lg">Town of Gilbert Utility Assistance</p>
                 <p class="h3-style">Town of Gilbert Utility Assistance</p>
                 <p>Gilbert's Finance Department lists various local and state resources for utility bill help and manages assistance via the Gilbert Heritage Center.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.gilbertaz.gov/departments/finance-mgmt-services/utilities/assistance" target="_blank" class="text-link-gold hover:underline">gilbertaz.gov/utility-assistance</a> | 📞 **Phone (Heritage Center):** <a href="tel:4809631423" class="text-link-gold hover:underline">480-963-1423</a> ext. 200</p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://www.gilbertaz.gov/departments/finance-mgmt-services/utilities/assistance" target="_blank" class="text-link-gold hover:underline">gilbertaz.gov/utility-assistance</a> |
+                📞  **Phone (Heritage Center):** <a href="tel:4809631423" class="text-link-gold hover:underline">480-963-1423</a> ext. 200</p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">A New Leaf (Rent and Utility Assistance)</p>
                 <p class="h3-style">A New Leaf (Rent and Utility Assistance)</p>
                 <p>A non-profit offering comprehensive community services, including emergency rental and utility assistance for qualified residents in the area.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://turnanewleaf.org/services/housing-and-shelter/#rent-utility-assistance" target="_blank" class="text-link-gold hover:underline">turnanewleaf.org/rent-utility-assistance</a></p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://turnanewleaf.org/services/housing-and-shelter/#rent-utility-assistance" target="_blank" class="text-link-gold hover:underline">turnanewleaf.org/rent-utility-assistance</a></p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Wildfire AZ (Arizona Self Help Locator)</p>
                 <p class="h3-style">Wildfire AZ (Arizona Self Help Locator)</p>
-                <p>This non-profit provides a powerful self-help locator tool to find utility, AC repair, and other support programs based on your zip code. Covers many local non-profits.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.arizonaselfhelp.org/" target="_blank" class="text-link-gold hover:underline">arizonaselfhelp.org</a> | ✉️ **Email:** info@wildfireaz.org</p>
+                <p>This non-profit provides a powerful self-help locator tool to find utility, AC repair, and other support programs based on your zip code.
+                Covers many local non-profits.</p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://www.arizonaselfhelp.org/" target="_blank" class="text-link-gold hover:underline">arizonaselfhelp.org</a> |  ✉️  **Email:** info@wildfireaz.org</p>
             </div>
         </section>
-
+        
         <section id="repair-content" class="content-section bg-white border-gold-accent text-gray-800 border-t-4">
-            <h3 class="text-2xl font-bold color-gold-accent mb-4">AC Repair, Replacement, and Weatherization</h3>
             <h3 class="h2-style color-gold-accent mb-4">AC Repair, Replacement, and Weatherization</h3>
-            <p class="mb-6">Programs designed to fix or replace inefficient AC units to reduce energy costs and health risks. These are primarily for homeowners.</p>
-
+            <p class="mb-6">Programs designed to fix or replace inefficient AC units to reduce energy costs and health risks.
+            These are primarily for homeowners.</p>
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Town of Gilbert Emergency Home Repair Program & Other Resources</p>
                 <p class="h3-style">Town of Gilbert Emergency Home Repair Program & Other Resources</p>
-                <p>Provides assistance to **low-income homeowners** within Gilbert for essential health, safety, and energy efficiency repairs, which includes critical HVAC services. Eligibility is income-based.</p>
-                <p class="font-mono mt-2">📞 **Gilbert Housing Services Phone:** <a href="tel:4805036979" class="text-link-gold hover:underline">480-503-6979</a> (Ask about Home Repair Program)</p>
-                <p class="font-mono">🌐 **Website:** <a href="https://www.gilbertaz.gov/residents/community-and-neighborhood-services/community-resources/emergency-minor-home-repair-program" target="_blank" class="text-link-gold hover:underline">Emergency Home Repair Program & Other Resources | Gilbert, Arizona</a></p>
+                <p>Provides assistance to **low-income homeowners** within Gilbert for essential health, safety, and energy efficiency repairs, which includes critical HVAC services.
+                Eligibility is income-based.</p>
+                <p class="font-mono mt-2"> 📞  **Gilbert Housing Services Phone:** <a href="tel:4805036979" class="text-link-gold hover:underline">480-503-6979</a> (Ask about Home Repair Program)</p>
+                <p class="font-mono"> 🌐  **Website:** <a href="https://www.gilbertaz.gov/residents/community-and-neighborhood-services/community-resources/emergency-minor-home-repair-program" target="_blank" class="text-link-gold hover:underline">Emergency Home Repair Program & Other Resources | Gilbert, Arizona</a></p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Rebuilding Together Valley of the Sun (Homeowner AC/Repair)</p>
                 <p class="h3-style">Rebuilding Together Valley of the Sun (Homeowner AC/Repair)</p>
-                <p>Provides critical home repairs and safety modifications, including HVAC system fixes or replacement, for low-income homeowners, seniors, and veterans at no cost. These services are available to eligible Gilbert residents.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.rtvos.org/" target="_blank" class="text-link-gold hover:underline">rtvos.org</a></p>
+                <p>Provides critical home repairs and safety modifications, including HVAC system fixes or replacement, for low-income homeowners, seniors, and veterans at no cost.
+                These services are available to eligible Gilbert residents.</p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://www.rtvos.org/" target="_blank" class="text-link-gold hover:underline">rtvos.org</a></p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Weatherization Assistance Program (WAP) - via All Thrive 365</p>
                 <p class="h3-style">Weatherization Assistance Program (WAP) - via All Thrive 365</p>
                 <p>This state program, operated by All Thrive 365 in Maricopa County, provides free home seals, insulation, and repair/replacement of old AC units to improve energy efficiency for eligible households.</p>
-                <p class="font-mono mt-2">🌐 **Application Info:** <a href="https://allthrive365.org/housing/energy-efficiency/" target="_blank" class="text-link-gold hover:underline">allthrive365.org/energy-efficiency</a> | 📞 **Phone:** <a href="tel:6022851800" class="text-link-gold hover:underline">602-285-1800</a> | ✉️ **Email:** <a href="mailto:mcwap@allthrive365.org" class="text-link-gold hover:underline">mcwap@allthrive365.org</a></p>
+                <p class="font-mono mt-2"> 🌐  **Application Info:** <a href="https://allthrive365.org/housing/energy-efficiency/" target="_blank" class="text-link-gold hover:underline">allthrive365.org/energy-efficiency</a> |
+                📞  **Phone:** <a href="tel:6022851800" class="text-link-gold hover:underline">602-285-1800</a> |  ✉️  **Email:** <a href="mailto:mcwap@allthrive365.org" class="text-link-gold hover:underline">mcwap@allthrive365.org</a></p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">FSL Home Improvements (Foundation for Senior Living)</p>
                 <p class="h3-style">FSL Home Improvements (Foundation for Senior Living)</p>
                 <p>Provides home repair and modifications, including AC repair and replacement services, to eligible low-income seniors and disabled residents in Maricopa County.</p>
-                <p class="font-mono mt-2">📞 **Phone:** <a href="tel:4808080429" class="text-link-gold hover:underline">480-808-0429</a></p>
+                <p class="font-mono mt-2"> 📞  **Phone:** <a href="tel:4808080429" class="text-link-gold hover:underline">480-808-0429</a></p>
             </div>
-
+            
             <hr class="my-6 border-gray-200">
+            
             <div class="resource-box bg-gray-100 border-gray-400 border-l-4">
-                <p class="font-semibold text-lg text-gray-800">Need a Private Contractor? (Non-Subsidized)</p>
-                <p class="text-sm">If you do not qualify for the assistance programs above and need to hire a private company for AC repair or replacement, it is crucial to follow these steps:</p>
-                <ul class="list-disc ml-6 text-sm mt-2">
                 <p class="h3-style text-gray-800">Need a Private Contractor? (Non-Subsidized)</p>
                 <p class="text-base">If you do not qualify for the assistance programs above and need to hire a private company for AC repair or replacement, it is crucial to follow these steps:</p>
                 <ul class="list-disc ml-6 text-base mt-3">
@@ -458,41 +398,33 @@
                     <li>**Get Multiple Quotes:** Obtain at least three written bids before committing to any major work.</li>
                     <li>**Check Reputation:** Look up reviews and ratings on the Better Business Bureau (BBB) or other local sites.</li>
                 </ul>
-                <p class="font-mono mt-2">🌐 **AZ Registrar of Contractors Lookup:** <a href="https://roc.az.gov/" target="_blank" class="text-link-gold hover:underline">roc.az.gov</a></p>
+                <p class="font-mono mt-2"> 🌐  **AZ Registrar of Contractors Lookup:** <a href="https://roc.az.gov/" target="_blank" class="text-link-gold hover:underline">roc.az.gov</a></p>
             </div>
-
         </section>
-
+        
         <section id="prevention-content" class="content-section bg-gray-50 border-gold-accent text-gray-800 border-t-4">
-            <h3 class="text-2xl font-bold color-gold-accent mb-4">Prevention & Heat Safety Tips</h3>
             <h3 class="h2-style color-gold-accent mb-4">Prevention & Heat Safety Tips</h3>
             <p class="mb-6 font-semibold">Know the signs of heat illness and take immediate action.</p>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Heat Exhaustion vs. Heat Stroke</p>
-                <ul class="list-disc ml-4 text-sm mt-1">
                 <p class="h3-style">Heat Exhaustion vs. Heat Stroke</p>
                 <ul class="list-disc ml-4 text-base mt-2">
                     <li>**Exhaustion:** Heavy sweating, paleness, muscle cramps, vomiting. **Action:** Move to a cool place, sip water.</li>
                     <li>**Stroke (EMERGENCY):** High body temperature (103°F+), red/hot/dry skin (no sweat), confusion, unconsciousness. **Action: Call 911 immediately.**</li>
                 </ul>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Hydration and Cooling</p>
-                <ul class="list-disc ml-4 text-sm mt-1">
                 <p class="h3-style">Hydration and Cooling</p>
                 <ul class="list-disc ml-4 text-base mt-2">
                     <li>Drink water before you feel thirsty; avoid sugary or alcoholic drinks.</li>
                     <li>Wear light-colored, loose-fitting clothing.</li>
                     <li>Take cool showers or baths to lower body temperature rapidly.</li>
                     <li>Use a misting bottle or wet towel on your neck/wrists.</li>
-
                 </ul>
             </div>
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Energy Saving Tips</p>
-                <ul class="list-disc ml-4 text-sm mt-1">
                 <p class="h3-style">Energy Saving Tips</p>
                 <ul class="list-disc ml-4 text-base mt-2">
                     <li>Set your thermostat as high as comfortably possible (e.g., 78°F).</li>
@@ -500,42 +432,35 @@
                     <li>Close blinds and curtains during the day to block sun exposure.</li>
                 </ul>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">AZ Department of Health Services (ADHS)</p>
                 <p class="h3-style">AZ Department of Health Services (ADHS)</p>
                 <p>Official guidance on heat preparedness, outdoor activity safety, and current heat advisories for Arizona.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.azdhs.gov/preparedness/epidemiology-disease-control/extreme-weather/heat-safety/index.php" target="_blank" class="text-link-gold hover:underline">azdhs.gov/heat-safety</a></p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://www.azdhs.gov/preparedness/epidemiology-disease-control/extreme-weather/heat-safety/index.php" target="_blank" class="text-link-gold hover:underline">azdhs.gov/heat-safety</a></p>
             </div>
         </section>
-
+        
         <section id="centers-content" class="content-section bg-white border-gold-accent text-gray-800 border-t-4">
-            <h3 class="text-2xl font-bold color-gold-accent mb-4">Find Local Cooling & Heat Relief Centers in Gilbert</h3>
             <h3 class="h2-style color-gold-accent mb-4">Find Local Cooling & Heat Relief Centers in Gilbert</h3>
             <p class="mb-6">
-                **Cooling Centers** (like libraries and community centers) offer general public cooling access. 
-                **Heat Relief/Respite Centers** are specifically designated sites (often run by non-profits) that provide additional resources like water, snacks, and medical checks. 
+                **Cooling Centers** (like libraries and community centers) offer general public cooling access.
+                **Heat Relief/Respite Centers** are specifically designated sites (often run by non-profits) that provide additional resources like water, snacks, and medical checks.
                 **Note: Hours are subject to change; always call ahead.**
             </p>
-
+            
             <div class="resource-box bg-gold-light border-gold-accent">
-                <p class="font-semibold text-lg">Maricopa County Heat Relief Network Map (Central Resource)</p>
-                <p class="text-sm">This is the official, county-wide map to find the closest active Cooling Centers and Hydration Stations in **Gilbert**. The map updates in real-time during heat events.</p>
                 <p class="h3-style">Maricopa County Heat Relief Network Map (Central Resource)</p>
-                <p class="text-base">This is the official, county-wide map to find the closest active Cooling Centers and Hydration Stations in **Gilbert**. The map updates in real-time during heat events.</p>
-                <p class="font-mono mt-2">🌐 **Interactive Map Link:** <a href="https://azmag.gov/Programs/Heat-Relief-Network" target="_blank" class="text-link-gold hover:underline">Maricopa County Heat Relief Network Map</a></p>
-                <p class="text-sm mt-2 font-medium">📞 **Also call 211:** They have the network's data for all operating sites.</p>
-                <p class="text-base mt-2 font-medium">📞 **Also call 211:** They have the network's data for all operating sites.</p>
+                <p class="text-base">This is the official, county-wide map to find the closest active Cooling Centers and Hydration Stations in **Gilbert**.
+                The map updates in real-time during heat events.</p>
+                <p class="font-mono mt-2"> 🌐  **Interactive Map Link:** <a href="https://azmag.gov/Programs/Heat-Relief-Network" target="_blank" class="text-link-gold hover:underline">Maricopa County Heat Relief Network Map</a></p>
+                <p class="text-base mt-2 font-medium"> 📞  **Also call 211:** They have the network's data for all operating sites.</p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">McQueen Park Activity Center (Cooling Center)</p>
-                <p class="text-sm">📍 **Address:** 510 N. Horne Street, Gilbert, AZ 85233</p>
                 <p class="h3-style">McQueen Park Activity Center (Cooling Center)</p>
-                <p class="text-base">📍 **Address:** 510 N. Horne Street, Gilbert, AZ 85233</p>
-                <p class="font-mono mt-2">📞 **Phone:** <a href="tel:4805036294" class="text-link-gold hover:underline">480-503-6294</a> | 🌐 **Website:** <a href="https://www.gilbertaz.gov/departments/parks-and-recreation/recreation-centers-classes/mcqueen-park-activity-center" target="_blank" class="text-link-gold hover:underline">Gilbert - McQueen Center</a></p>
-                <p class="text-sm mt-2 font-medium">Current Operating Hours:</p>
-                <ul class="list-disc ml-6 text-xs">
+                <p class="text-base"> 📍  **Address:** 510 N. Horne Street, Gilbert, AZ 85233</p>
+                <p class="font-mono mt-2"> 📞  **Phone:** <a href="tel:4805036294" class="text-link-gold hover:underline">480-503-6294</a> |
+                🌐  **Website:** <a href="https://www.gilbertaz.gov/departments/parks-and-recreation/recreation-centers-classes/mcqueen-park-activity-center" target="_blank" class="text-link-gold hover:underline">Gilbert - McQueen Center</a></p>
                 <p class="text-base mt-2 font-medium">Current Operating Hours:</p>
                 <ul class="list-disc ml-6 text-base mt-2">
                     <li>Monday - Friday: 8:00 AM - 9:00 PM</li>
@@ -543,15 +468,11 @@
                     <li>Sunday: Closed</li>
                 </ul>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Southeast Regional Library (Cooling Center)</p>
-                <p class="text-sm">📍 **Address:** 775 N Greenfield Rd, Gilbert, AZ 85234</p>
                 <p class="h3-style">Southeast Regional Library (Cooling Center)</p>
-                <p class="text-base">📍 **Address:** 775 N Greenfield Rd, Gilbert, AZ 85234</p>
-                <p class="font-mono mt-2">📞 **Phone:** <a href="tel:6026523000" class="text-link-gold hover:underline">602-652-3000</a> | 🌐 **Website:** <a href="https://mcldaz.org/southeast" target="_blank" class="text-link-gold hover:underline">MCLDAZ Southeast</a></p>
-                <p class="text-sm mt-2 font-medium">Current Operating Hours:</p>
-                <ul class="list-disc ml-6 text-xs">
+                <p class="text-base"> 📍  **Address:** 775 N Greenfield Rd, Gilbert, AZ 85234</p>
+                <p class="font-mono mt-2"> 📞  **Phone:** <a href="tel:6026523000" class="text-link-gold hover:underline">602-652-3000</a> |  🌐  **Website:** <a href="https://mcldaz.org/southeast" target="_blank" class="text-link-gold hover:underline">MCLDAZ Southeast</a></p>
                 <p class="text-base mt-2 font-medium">Current Operating Hours:</p>
                 <ul class="list-disc ml-6 text-base mt-2">
                     <li>Monday - Thursday: 10:00 AM – 9:00 PM</li>
@@ -559,15 +480,12 @@
                     <li>Sunday: 1:00 PM – 5:00 PM</li>
                 </ul>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Gilbert Community Center (Cooling Center)</p>
-                <p class="text-sm">📍 **Address:** 130 N. Oak Street, Gilbert, AZ 85233</p>
                 <p class="h3-style">Gilbert Community Center (Cooling Center)</p>
-                <p class="text-base">📍 **Address:** 130 N. Oak Street, Gilbert, AZ 85233</p>
-                <p class="font-mono mt-2">📞 **Phone:** <a href="tel:4805036290" class="text-link-gold hover:underline">480-503-6290</a> | 🌐 **Website:** <a href="https://www.gilbertaz.gov/departments/parks-and-recreation/recreation-centers-classes/gilbert-community-center" target="_blank" class="text-link-gold hover:underline">Gilbert Community Center</a></p>
-                <p class="text-sm mt-2 font-medium">Current Operating Hours:</p>
-                <ul class="list-disc ml-6 text-xs">
+                <p class="text-base"> 📍  **Address:** 130 N. Oak Street, Gilbert, AZ 85233</p>
+                <p class="font-mono mt-2"> 📞  **Phone:** <a href="tel:4805036290" class="text-link-gold hover:underline">480-503-6290</a> |
+                🌐  **Website:** <a href="https://www.gilbertaz.gov/departments/parks-and-recreation/recreation-centers-classes/gilbert-community-center" target="_blank" class="text-link-gold hover:underline">Gilbert Community Center</a></p>
                 <p class="text-base mt-2 font-medium">Current Operating Hours:</p>
                 <ul class="list-disc ml-6 text-base mt-2">
                     <li>Monday - Thursday: 8:00 AM - 6:00 PM</li>
@@ -576,88 +494,79 @@
                     <li>Sunday: Closed</li>
                 </ul>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">211 Arizona (Up-to-Date Information on ALL Centers)</p>
                 <p class="h3-style">211 Arizona (Up-to-Date Information on ALL Centers)</p>
                 <p>Call **211** to find the most current and comprehensive list of all local cooling centers, hydration stations, and dedicated Heat Relief/Respite centers and their specific services.</p>
-                <p class="font-mono mt-2">📞 **Phone:** <a href="tel:211" class="text-link-gold hover:underline">2-1-1</a> (Available 24/7)</p>
+                <p class="font-mono mt-2"> 📞  **Phone:** <a href="tel:211" class="text-link-gold hover:underline">2-1-1</a> (Available 24/7)</p>
             </div>
         </section>
-
+        
         <section id="report-content" class="content-section bg-gray-50 border-gold-accent text-gray-800 border-t-4">
-            <h3 class="text-2xl font-bold color-gold-accent mb-4">Report a Heat or Housing Issue</h3>
             <h3 class="h2-style color-gold-accent mb-4">Report a Heat or Housing Issue</h3>
             <p class="mb-6">If you are a renter and your landlord refuses to repair a broken AC unit, or if you see hazardous conditions, use these contacts.</p>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Town of Gilbert Code Enforcement</p>
                 <p class="h3-style">Town of Gilbert Code Enforcement</p>
                 <p>Handles complaints regarding minimum housing standards, including non-functional AC units in rental properties.</p>
-                <p class="font-mono mt-2">📞 **Gilbert Code Enforcement Contact:** <a href="tel:4805036800" class="text-link-gold hover:underline">480-503-6800</a> (Ask for Code Enforcement)</p>
+                <p class="font-mono mt-2"> 📞  **Gilbert Code Enforcement Contact:** <a href="tel:4805036800" class="text-link-gold hover:underline">480-503-6800</a> (Ask for Code Enforcement)</p>
             </div>
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Arizona Tenant Rights Resources</p>
                 <p class="h3-style">Arizona Tenant Rights Resources</p>
-                <p>Find legal aid and information regarding tenant rights in Maricopa County, especially concerning essential services like air conditioning. Contact for local referral services.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.azlawhelp.org/articles_info.cfm?mc=1&sc=2&articleid=20" target="_blank" class="text-link-gold hover:underline">AZ Law Help - Landlord/Tenant</a></p>
+                <p>Find legal aid and information regarding tenant rights in Maricopa County, especially concerning essential services like air conditioning.
+                Contact for local referral services.</p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://www.azlawhelp.org/articles_info.cfm?mc=1&sc=2&articleid=20" target="_blank" class="text-link-gold hover:underline">AZ Law Help - Landlord/Tenant</a></p>
             </div>
-
+            
             <div class="resource-box">
-                <p class="font-semibold text-lg">Arizona Landlord and Tenant Act (A.R.S. Title 33, Chapter 10)</p>
                 <p class="h3-style">Arizona Landlord and Tenant Act (A.R.S. Title 33, Chapter 10)</p>
                 <p>Official legal reference outlining the requirements for landlords to maintain livable premises, which typically includes functioning cooling units during the summer.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.azleg.gov/ars/33/01301.htm" target="_blank" class="text-link-gold hover:underline">Arizona Revised Statutes, Title 33</a></p>
+                <p class="font-mono mt-2"> 🌐  **Website:** <a href="https://www.azleg.gov/ars/33/01301.htm" target="_blank" class="text-link-gold hover:underline">Arizona Revised Statutes, Title 33, Chapter 10</a></p>
             </div>
         </section>
-
+        
         <div class="mt-12 p-6 bg-red-100 border-l-4 border-red-500 rounded-lg shadow-md">
-            <h3 class="text-xl font-extrabold text-red-700 mb-2">⚠️ Critical Safety & Disclaimer Information</h3>
-            <p class="text-gray-800 text-sm">
-            <h3 class="h3-style text-red-700 mb-2">⚠️ Critical Safety & Disclaimer Information</h3>
+            <h3 class="h3-style text-red-700 mb-2"> ⚠️ Critical Safety & Disclaimer Information</h3>
             <p class="text-gray-800 text-base">
-                **Critical Action:** If you or someone you know is in immediate danger of heat illness, **call 911**. This website provides resource listings only. For life-threatening emergencies, seek immediate medical attention.
+                **Critical Action:** If you or someone you know is in immediate danger of heat illness, **call 911**.
+                This website provides resource listings only. For life-threatening emergencies, seek immediate medical attention.
             </p>
-            <p class="text-gray-700 text-sm mt-3">
             <p class="text-gray-700 text-base mt-3">
                 **Geographic Scope:** Most programs listed primarily serve Gilbert residents. Assistance is **not guaranteed** for residents outside of the Town of Gilbert.
             </p>
-            <p class="text-gray-700 text-sm mt-3">
             <p class="text-gray-700 text-base mt-3">
-                **Seasonal Availability:** Many financial and cooling programs are only active during the high heat season (typically **May - September**). Always confirm availability. Resource information is subject to change.
+                **Seasonal Availability:** Many financial and cooling programs are only active during the high heat season (typically **May - September**).
+                Always confirm availability. Resource information is subject to change.
             </p>
         </div>
     </main>
+
     <script>
         // Smooth scroll function for sticky nav links
         document.querySelectorAll('.sticky-nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const targetCardId = this.getAttribute('href'); // e.g., #emergency-card
                 const targetCardId = this.getAttribute('href'); 
                 const targetCard = document.querySelector(targetCardId);
-
+                
                 if (targetCard) {
                     // Smooth scroll to the card
                     targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
                     // Automatically click the card to open its content section
-                    // This leverages the existing toggleContent function
-                    // We wrap it in a short timeout to ensure the scroll starts first
                     setTimeout(() => {
-                        targetCard.click();
-                        // Check if the content is already open before clicking
                         const contentId = targetCard.id.replace('-card', '-content');
                         const content = document.getElementById(contentId);
+                        // Only click if the content is NOT already open
                         if (!content.classList.contains('active')) {
-                             targetCard.click();
+                            targetCard.click();
                         }
-                    }, 500); 
+                    }, 500);
                 }
             });
         });
 
-        // Existing toggle function, modified slightly to handle new structure
         // Existing toggle function
         function toggleContent(contentId, cardElement) {
             const content = document.getElementById(contentId);
@@ -667,8 +576,7 @@
             document.querySelectorAll('.content-section.active').forEach(section => {
                 section.classList.remove('active');
             });
-
-            // Remove 'active-card' state from all cards
+            // Remove 'active-card' state (bg-gold-light) from all cards
             document.querySelectorAll('.resource-card').forEach(card => {
                 card.classList.remove('bg-gold-light');
             });
@@ -677,12 +585,10 @@
             if (!isActive) {
                 content.classList.add('active');
                 cardElement.classList.add('bg-gold-light');
-
-                // Ensure the opened content is visible after the scroll from the sticky nav
-                // If it was just clicked, this ensures it appears correctly
-                // Ensure the opened content is visible 
+                
+                // Ensure the opened content is visible
                 if (window.scrollY > content.offsetTop - window.innerHeight / 2) {
-                     content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    content.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }
         }
