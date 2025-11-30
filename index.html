@@ -12,7 +12,7 @@
         body {
             font-family: 'Inter', sans-serif; /* Applied font */
             background-color: #f4f7f9; /* Light background */
-            font-size: 18px; /* --- FIX 1: Body size 18px --- */
+            font-size: 18px; /* --- FIX 1: Body size 18px (H5) --- */
             line-height: 1.6; /* --- FIX 3: Consistent line height --- */
         }
         
@@ -50,9 +50,9 @@
             text-decoration: underline;
         }
         
-        /* Header color is dark gray */
+        /* --- NEW COLOR CHANGE: Trustworthy Dark Blue Header --- */
         .header-bg {
-            background-color: #343a40;
+            background-color: #1A437E; /* Deep Navy Blue */
         }
         
         /* FIX 3: CONSISTENT SPACING */
@@ -64,7 +64,7 @@
             margin-right: auto;
         }
 
-        /* Standard Card Spacing (Adjusted to H3) */
+        /* Standard Card Spacing (Applies H3 styles to card titles) */
         .resource-card h3 {
             font-size: 20px;
             font-weight: 600;
@@ -106,7 +106,7 @@
             margin-bottom: 10px; /* 10px spacing */
         }
 
-        /* sticky nav styles */
+        /* sticky nav styles (Light Teal) */
         .sticky-nav {
             position: sticky;
             top: 0;
@@ -338,7 +338,7 @@
             <div class="resource-box">
                 <p class="h3-style">Wildfire AZ (Arizona Self Help Locator)</p>
                 <p>This non-profit provides a powerful self-help locator tool to find utility, AC repair, and other support programs based on your zip code. Covers many local non-profits.</p>
-                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.arizonaselfhelp.org/" target="_blank" class="text-link-gold hover:underline">arizonaselfhelp.org</a> | ✉️ **Email:** info@wildfireaz.org</p>
+                <p class="font-mono mt-2">🌐 **Website:** <a href="https://www.arizonaselfhelp.org/" target="_blank" class="text-link-gold hover:underline">arizonaselfhelp.org</a> | ✉️ **Email:** <a href="mailto:info@wildfireaz.org" class="text-link-gold hover:underline">info@wildfireaz.org</a></p>
             </div>
         </section>
         
@@ -569,6 +569,7 @@
     </script>
 </body>
 </html>
+
 
 
 
