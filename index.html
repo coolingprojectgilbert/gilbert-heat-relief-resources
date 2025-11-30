@@ -59,7 +59,7 @@
                 ☀️ Community Resource Project | Created by an ASU Student (December 2025)
             </p>
             <p>
-                **Disclaimer:** This resource is provided for informational purposes only and is not affiliated with the organizations listed. Resource information, including eligibility and availability, is subject to change. Always call the organization directly to confirm eligibility and application status.
+                **Disclaimer:** This resource is provided for informational purposes only and is **not affiliated** with the organizations listed. Resource information, including eligibility and availability, is subject to change. **Always call the organization directly** to confirm eligibility and application status.
             </p>
         </div>
     </section>
@@ -404,38 +404,3 @@
             const content = document.getElementById(contentId);
             const allContents = document.querySelectorAll('.content-section');
             const allCards = document.querySelectorAll('.resource-card');
-            const targetIcon = document.getElementById(contentId.replace('-content', '-icon'));
-
-            // Close all other sections and remove active class from all cards
-            allContents.forEach(section => {
-                if (section.id !== contentId) {
-                    section.classList.remove('active');
-                }
-            });
-            allCards.forEach(card => {
-                if (card !== cardElement) {
-                    card.classList.remove('border-opacity-100');
-                    // Reset icons for closed cards
-                    const icon = document.getElementById(card.id.replace('-card', '-icon'));
-                    if (icon) {
-                        icon.style.transform = 'rotate(0deg)';
-                    }
-                }
-            });
-
-            // Toggle the clicked content
-            if (content.classList.contains('active')) {
-                content.classList.remove('active');
-                cardElement.classList.remove('border-opacity-100');
-                if (targetIcon) targetIcon.style.transform = 'rotate(0deg)';
-            } else {
-                content.classList.add('active');
-                cardElement.classList.add('border-opacity-100');
-                if (targetIcon) targetIcon.style.transform = 'rotate(90deg)';
-                // Scroll to the content section
-                content.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    </script>
-</body>
-</html>
